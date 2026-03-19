@@ -42,7 +42,7 @@
     <p><strong>⏰</strong> {{ c.time }}</p>
   </div>
 
-  <button class="cancel-btn" @click="cancelConsultation(c._id)">
+  <button class="cancel-btn" @click="deleteConsultation(c._id)">
     Cancelar
   </button>
 </div>
@@ -120,15 +120,20 @@ const createConsultation = async () => {
 };
 
 const deleteConsultation = async (id) => {
-  try {
-    await api.delete(`/consultations/${id}`);
-
-    toast.success("Consulta cancelada!");
-
-    loadConsultations(); 
-
-  } catch (err) {
-    toast.error("Erro ao cancelar consulta");
+  const confirmacao = window.confirm("Deseja cancelar esta consulta?");
+  
+  if (confirmacao) {
+    try {
+      await api.delete(`/consultations/${id}`);
+      toast.success("Consulta cancelada!", {
+        position: "top-right",
+      });
+      loadConsultations();
+    } catch {
+      toast.error("Erro ao cancelar consulta", {
+        position: "top-right",
+      });
+    }
   }
 };
 
