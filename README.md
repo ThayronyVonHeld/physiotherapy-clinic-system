@@ -63,5 +63,5 @@ npm run dev
 - **Backend:** [Link do Render/Railway aqui]
 
 ---
-Desenvolvido por **Thayrony VonHeld** para o projeto de Fisioterapia da Dra. Maggessy.
+Desenvolvido por **Thayrony VonHeld** para o projeto de Fisioterapia da Dra. Clara Maggessy.
 ```
