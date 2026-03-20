@@ -57,11 +57,6 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## 🌐 Deploy (Links Sugeridos)
-- **Frontend:** [Link do Vercel/Netlify aqui]
-- **Backend:** [Link do Render/Railway aqui]
-
 ---
 Desenvolvido por **Thayrony VonHeld** para o projeto de Fisioterapia da Dra. Clara Maggessy.
 ```
