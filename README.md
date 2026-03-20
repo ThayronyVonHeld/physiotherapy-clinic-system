@@ -1,62 +1,154 @@
-# 🩺 Intelligent Customer Service System - Dra. Maggessy
+# 🏥 Dra. Maggessy Fisioterapia
 
-Um sistema inteligente de agendamento fisioterapêutico que integra APIs externas para oferecer uma experiência personalizada ao paciente, informando condições climáticas e automatizando endereços.
+Sistema web completo para gerenciamento de consultas em uma clínica de fisioterapia.
+
+O projeto permite cadastro de usuários, login com autenticação JWT, agendamento de consultas e painel administrativo para secretária.
+
+---
+
+# 🚀 Deploy
+
+- 🌐 Frontend: https://clinica-clara-fisioterapeuta.vercel.app/
+- ⚙️ Backend: https://clinica-clara-fisioterapeuta.onrender.com
+
+---
+
+# 🧠 Funcionalidades
+
+## 👤 Usuário
+- Cadastro de conta
+- Login com autenticação JWT
+- Agendamento de consultas
+- Visualização de consultas
+- Cancelamento de consultas
+
+## 🧑‍💼 Secretário
+- Visualizar todas as consultas
+- Visualizar dados dos pacientes
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+## Backend
+- Node.js
+- Express
+- MongoDB Atlas
+- Mongoose
+- JWT (JSON Web Token)
+- Bcrypt
+
+## Frontend
+- Vue.js 3
+- Axios
+- Vue Toastification
+- CSS moderno com design responsivo
+
+## Deploy
+- Vercel (Frontend)
+- Render (Backend)
+
+---
+
+# 🔐 Autenticação
+
+O sistema utiliza autenticação baseada em JWT:
+
+- Token gerado no login
+- Armazenado no frontend
+- Enviado no header:
 
 
-## 🚀 Funcionalidades Principais
+Authorization: Bearer TOKEN
 
-- **Agendamento Inteligente:** Pacientes podem agendar horários fixos (09h às 19h), evitando conflitos.
-- **Integração com Clima (OpenWeather):** Exibe a previsão do tempo no dia da consulta, avisando se haverá chuva.
-- **Automação de Endereço (ViaCEP):** Preenchimento automático de logradouro, bairro e cidade através do CEP no cadastro.
-- **Painel Administrativo:** Visão completa da agenda para a secretária/doutora, com gestão de todos os pacientes.
-- **Segurança:** Autenticação via JWT (JSON Web Tokens) com senhas criptografadas por Bcrypt.
 
-## 🛠️ Tecnologias Utilizadas
 
-### Frontend
-- **Vue.js 3** (Composition API)
-- **Vite** (Build tool)
-- **Vue Router** (Navegação SPA)
-- **Axios** (Consumo de API)
-- **SweetAlert2** & **Vue-Toastification** (Feedback visual)
+- Middleware protege rotas privadas
 
-### Backend
-- **Node.js** com **Express**
-- **MongoDB** com **Mongoose** (Banco de dados NoSQL)
-- **JWT** (Autenticação)
-- **Bcrypt.js** (Segurança de dados)
+---
 
-## 🔧 Como rodar o projeto
+# 📦 Estrutura do Projeto
 
-### Pré-requisitos
-- Node.js instalado
-- Conta no MongoDB Atlas (ou MongoDB Local)
-- Chave de API do [OpenWeatherMap](https://openweathermap.org/)
+```
 
-### 1. Configuração do Backend
+📁 backend
+├── config
+├── models
+├── routes
+├── middlewares
+├── services
+└── server.js
+
+📁 frontend
+├── components
+├── views
+├── services
+└── main.js
+
+````
+
+---
+
+# ⚙️ Como rodar localmente
+
+## 🔧 Backend
+
 ```bash
 cd backend
 npm install
+npm run dev
+````
 
-```
-Crie um arquivo `.env` na pasta `/backend` com as seguintes chaves:
-```env
-PORT=3000
-MONGO_URI=sua_uri_do_mongodb
-JWT_SECRET=seu_segredo_jwt
-WEATHER_API_KEY=sua_chave_openweather
-```
-Inicie o servidor:
-```bash
-npm start
-```
+## 🔧 Frontend
 
-### 2. Configuração do Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+
 ---
-Desenvolvido por **Thayrony VonHeld** para o projeto de Fisioterapia da Dra. Clara Maggessy.
+
+# 🌎 Variáveis de Ambiente
+
+Crie um arquivo `.env` no backend:
+
+```env
+PORT=3000
+MONGO_URI=seu_mongo_uri
+JWT_SECRET=seu_segredo
 ```
+
+---
+
+# 🔌 Integrações
+
+* API de Clima (OpenWeather)
+* API de CEP 
+
+---
+
+# 📌 Melhorias Futuras
+
+* Sistema de notificações
+* Dashboard com gráficos
+* Responsividade mobile aprimorada
+* Upgrade no Desing
+
+---
+
+# 👨‍💻 Autor
+
+**Thayrony Von Held**
+
+* Estudante de Análise e Desenvolvimento de Sistemas
+* Desenvolvedor Full Stack em formação
+
+---
+
+# 📢 Observações
+
+Este projeto foi desenvolvido com foco em aprendizado prático, simulando um sistema real de clínica.
+
+---
+
