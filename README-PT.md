@@ -16,6 +16,8 @@ Sistema web completo para gerenciamento de consultas em uma clínica de fisioter
 
 O projeto permite cadastro de usuários, login com autenticação JWT, agendamento de consultas e painel administrativo para secretária.
 
+---
+
 # 🚀 Deploy
 
 - 🌐 Frontend: https://clinica-clara-fisioterapeuta.vercel.app/
